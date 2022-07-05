@@ -1,0 +1,77 @@
+header{
+  display: grid;
+  grid-template-columns: auto  auto auto auto auto auto;
+}
+
+.btn-nav, .btn-nav a{
+  text-align: center;
+  text-decoration: none;
+  color: #012A4A;
+  font-weight: bold;
+  border-radius: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/***  pour le soulignage des boutons  ***/
+.btn-nav a{
+  display: inline-block;
+  position: relative;
+}
+
+.btn-nav a:focus{
+  color: #61A5C2;
+}
+
+.btn-nav a::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2C7DA0;
+  transition: width 0.25s ease-out;
+}
+
+.btn-nav a:hover::before{
+  width: 100%;
+  cursor: pointer;
+  left: 0;
+  right: auto;
+}
+
+.active {
+  .btn-nav a, .btn-nav{
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+}
+/*************************************/
+
+/*
+.btn-nav:hover{
+  background-color: #89C2D9;
+}
+*/
+
+
+
+
+
+/*  affichage grille et positionnement  */
+#about{
+  grid-column-start: 3;
+}
+
+#study{
+  grid-column-start: 4;
+}
+
+#project{
+  grid-column-start: 5;
+}
+
+#contact{
+  grid-column-start: 6;
+}

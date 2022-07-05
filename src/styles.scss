@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Calistoga";
+  src: url("./assets/fonts/Calistoga-Regular.woff2") format("truetype");
+}
+
+@font-face {
+  font-family: "Grenze";
+  src: url("./assets/fonts/Grenze-Regular.woff2") format("truetype");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&display=swap');
+
+body{
+  background-color: #A9D6E5;
+}
+
+*{
+  font-family: "Arima", cursive;
+}
