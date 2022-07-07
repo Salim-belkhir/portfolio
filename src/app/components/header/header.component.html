@@ -1,15 +1,42 @@
-<header>
-  <div class="btn-nav" id="about">
-    <a routerLink="about" routerLinkActive="active">About me</a>
-  </div>
-  <div class="btn-nav" id="study">
-    <a routerLink="" routerLinkActive="active">My Studies</a>
-  </div>
-  <div class="btn-nav" id="project">
-    <a routerLink="">My projects</a>
-  </div>
-  <div class="btn-nav" id="contact">
-    <a routerLink="">Contact</a>
+<div class="parent">
+
+  <header id="MyHeader" class="div2">
+    <div class="btn-nav" id="about">
+      <a routerLink="about" routerLinkActive="active">About me</a>
+    </div>
+    <div class="btn-nav" id="study">
+      <a routerLink="" routerLinkActive="active">My Studies</a>
+    </div>
+    <div class="btn-nav" id="project">
+      <a routerLink="">My projects</a>
+    </div>
+    <div class="btn-nav" id="contact">
+      <a routerLink="">Contact</a>
+    </div>
+
+  </header>
+
+
+  <app-side class="div1"></app-side>
+
+  <div class="div3">
+    <router-outlet></router-outlet>
   </div>
 
-</header>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("MyHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("stic  ky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</div>

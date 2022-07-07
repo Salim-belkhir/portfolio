@@ -1,6 +1,8 @@
 header{
   display: grid;
+  height : auto;
   grid-template-columns: auto  auto auto auto auto auto;
+  font-size: large;
 }
 
 .btn-nav, .btn-nav a{
@@ -11,6 +13,12 @@ header{
   border-radius: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 /***  pour le soulignage des boutons  ***/
@@ -74,4 +82,43 @@ header{
 
 #contact{
   grid-column-start: 6;
+}
+
+
+
+
+/**** Organisation   ****/
+
+.parent {
+  display: grid;
+  position: absolute;
+  grid-template-columns: repeat(5, 1fr);
+  /*grid-template-rows: repeat(5, 1fr);*/
+  grid-template-rows: auto auto auto auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 99%;
+  height: 98%;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 6 / 2;
+  position: absolute;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 6;
+
+}
+.div3 {
+  grid-area: 2 / 2 / 6 / 6;
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.div3::-webkit-scrollbar {
+  display: none;
 }
